@@ -2,6 +2,7 @@ import React from "react";
 // import Navbar from "./Navbar";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Row, Image, Col } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 class Home extends React.Component {
   state = {
@@ -10,8 +11,8 @@ class Home extends React.Component {
   };
 
   async componentDidMount() {
-    const getAlbum = await fetch(
-      "https://deezerdevs-deezer.p.rapidapi.com/search?q=eminem",
+    const getAlbums = await fetch(
+      "https://deezerdevs-deezer.p.rapidapi.com/search?q=vinnie%20paz",
       {
         method: "GET",
         headers: {
@@ -21,7 +22,7 @@ class Home extends React.Component {
         },
       }
     );
-    const data = await getAlbum.json();
+    const data = await getAlbums.json();
     console.log(data);
     this.setState({ albums: data, loading: false });
   }
@@ -39,10 +40,15 @@ class Home extends React.Component {
               {this.state.albums.data.map((album, key) => (
                 <Row className="albums-wrapper mx-2 my-3" key={key}>
                   <Col className="item-wrapper">
-                    <Image className="album-cover" src={album.album.cover} />
-                    <h4 className="d-flex justify-content-center mt-2 album-title">
-                      {album.album.title}
-                    </h4>
+                    <Link
+                      to={`/album/${album.album.id}`}
+                      style={{ textDecoration: "none", color: "lightgrey" }}
+                    >
+                      <Image className="album-cover" src={album.album.cover} />
+                      <h4 className="d-flex justify-content-center mt-2 album-title">
+                        {album.album.title}
+                      </h4>
+                    </Link>
                   </Col>
                 </Row>
               ))}

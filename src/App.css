@@ -15,12 +15,7 @@ body {
     #1d1d1e,
     #242526,
     #2b3237,
-    #2f4146,
-    #335054,
-    #326974,
-    #2b8298,
-    #1c9cbf,
-    #00b6e9
+    #2f4146
   );
 }
 
@@ -89,10 +84,17 @@ body {
 .item-wrapper {
   width: 200px;
   height: 100%;
+  padding: 5px;
   display: flex;
   flex-direction: column;
   align-items: center;
   color: rgb(206, 206, 206);
+  transition: transform 0.2s;
+}
+
+.item-wrapper:hover {
+  transform: scale(1.1);
+  box-shadow: 1px 1px 10px lightblue;
 }
 
 .player-wrapper {
@@ -107,8 +109,9 @@ body {
 }
 
 .album-cover {
-  width: 10rem;
+  width: 12rem;
 }
+
 .main-page {
   margin-left: 25%;
   margin-bottom: 10%;
@@ -150,4 +153,13 @@ body {
 
 .album-title {
   font-size: 1rem;
+}
+
+.album-page {
+  width: 50%;
+  height: 50%;
+  display: flex;
+  margin: auto;
+  color: darkgray;
+  margin-top: 10%;
 }
