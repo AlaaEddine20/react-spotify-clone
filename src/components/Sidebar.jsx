@@ -13,7 +13,7 @@ class Sidebar extends React.Component {
           <div id="sidebar-logo-wrapper">
             <Image src={logo} id="sidebar-logo" />
           </div>
-          <ul className="sidebar-list ml-4">
+          <ul className="sidebar-list ml-5">
             {SidebarData.map((prop, key) => {
               return (
                 <li

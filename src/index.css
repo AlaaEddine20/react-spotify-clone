@@ -1,17 +1,3 @@
-/* body {
-  background-image: linear-gradient(
-    to left,
-    #000000,
-    #0d0d0d,
-    #161617,
-    #1d1d1e,
-    #242526,
-    #2b3237,
-    #2f4146,
-    #335054,
-    #326974,
-    #2b8298,
-    #1c9cbf,
-    #00b6e9
-  );
-} */
+body::-webkit-scrollbar {
+  display: none;
+}

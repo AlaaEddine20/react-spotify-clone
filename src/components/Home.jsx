@@ -1,9 +1,7 @@
 import React from "react";
-// import { Container, Nav, Row } from "react-bootstrap";
-import Sidebar from "./Sidebar";
 // import Navbar from "./Navbar";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Col, Image } from "react-bootstrap";
+import { Row, Image, Col } from "react-bootstrap";
 
 class Home extends React.Component {
   state = {
@@ -24,29 +22,33 @@ class Home extends React.Component {
       }
     );
     const data = await getAlbum.json();
-    this.setState({ albums: data, loading: false });
     console.log(data);
+    this.setState({ albums: data, loading: false });
   }
 
   render() {
-    const { albums, loading } = this.props;
+    const { loading } = this.state;
     return (
       <div className="Home">
         {/* <Navbar /> */}
-        <div className="main-page">
+        <div className="main-page row mt-5">
           {loading ? (
             <h4>{loading}</h4>
           ) : (
             <>
-              {albums.map((album) => (
-                <Col>
-                  <Image src={album.album.cover} />
-                </Col>
+              {this.state.albums.data.map((album, key) => (
+                <Row className="albums-wrapper mx-2 my-3" key={key}>
+                  <Col className="item-wrapper">
+                    <Image className="album-cover" src={album.album.cover} />
+                    <h4 className="d-flex justify-content-center">
+                      {album.album.title}
+                    </h4>
+                  </Col>
+                </Row>
               ))}
             </>
           )}
         </div>
-        <Sidebar />
       </div>
     );
   }
