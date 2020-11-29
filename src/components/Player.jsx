@@ -17,18 +17,18 @@ function Player() {
           src="https://upload.wikimedia.org/wikipedia/en/4/42/Relapse_%28album%29.jpg"
           alt=""
         />
-        <div className="player-song-info">
+        <div className="player-song-info ml-2 my-auto">
           <h4>Eminem</h4>
           <p>My Darling</p>
         </div>
       </div>
 
       <div className="player-center">
-        <ShuffleIcon className="player-icons" />
-        <SkipPreviousIcon className="player-icons" />
+        <ShuffleIcon className="player-icons mr-3" />
+        <SkipPreviousIcon className="player-icons mr-3" />
         <PlayCircleOutlineIcon className="player-icons" />
-        <SkipNextIcon className="player-icons" />
-        <RepeatIcon className="player-icons" />
+        <SkipNextIcon className="player-icons ml-3" />
+        <RepeatIcon className="player-icons ml-3" />
       </div>
       <div className="player-right">
         <Grid container spacing={2}>

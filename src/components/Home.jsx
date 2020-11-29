@@ -40,7 +40,7 @@ class Home extends React.Component {
                 <Row className="albums-wrapper mx-2 my-3" key={key}>
                   <Col className="item-wrapper">
                     <Image className="album-cover" src={album.album.cover} />
-                    <h4 className="d-flex justify-content-center">
+                    <h4 className="d-flex justify-content-center mt-2 album-title">
                       {album.album.title}
                     </h4>
                   </Col>
