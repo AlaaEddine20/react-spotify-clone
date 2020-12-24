@@ -1,6 +1,6 @@
+import React from "react";
 import { Button } from "@material-ui/core";
 import { Image } from "react-bootstrap";
-import React from "react";
 import SidebarData from "./SidebarData";
 import logo from "../logo/Spotify_Logo.png";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -32,7 +32,13 @@ class Sidebar extends React.Component {
           </ul>
           <div id="sidebar-buttons">
             <div className="d-flex justify-content-center mb-3">
-              <Button variant="light" id="signup">
+              <Button
+                onClick={() => {
+                  window.location.pathname = "/signup";
+                }}
+                variant="light"
+                id="signup"
+              >
                 Sign Up
               </Button>
             </div>

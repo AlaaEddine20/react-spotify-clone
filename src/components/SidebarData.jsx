@@ -22,14 +22,14 @@ const Sidebardata = [
     link: "/library",
   },
 
-  {
-    button: "SignUp",
-    link: "/signup",
-  },
+  // {
+  //   button: "SignUp",
+  //   link: "/signup",
+  // },
 
-  {
-    button: "Login",
-    link: "/login",
-  },
+  // {
+  //   button: "Login",
+  //   link: "/login",
+  // },
 ];
 export default Sidebardata;

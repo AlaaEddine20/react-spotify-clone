@@ -1,5 +1,4 @@
 import React from "react";
-// import Navbar from "./Navbar";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Row, Image, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
@@ -31,7 +30,6 @@ class Home extends React.Component {
     const { loading } = this.state;
     return (
       <div className="Home">
-        {/* <Navbar /> */}
         <div className="main-page row mt-5">
           {loading ? (
             <h4>{loading}</h4>
